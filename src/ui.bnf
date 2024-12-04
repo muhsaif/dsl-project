@@ -1,0 +1,42 @@
+<DSL> ::= <Component>+
+
+<Component> ::= <Button> | <TextField> | <Checkbox> | <Dropdown> | <Modal> 
+            | <Label> | <Link> | <Image> | <Icon> | <Table> | <ProgressBar> 
+            | <Spinner> | <Slider> | <ProgressBarComponent> | <Grid> | <InputGroup> 
+            | <Form> | <Carousel>
+
+<Button> ::= "Button" "{" "text:" <String> ";" "width:" <String> ";" "height:" <String> ";" "color:" <String> ";"}"
+<TextField> ::= "TextField" "{" "placeholder:" <String> ";" "width:" <String> ";" "height:" <String> ";"}"
+<Checkbox> ::= "Checkbox" "{" "label:" <String> ";" "checked:" <Boolean> ";" "width:" <String> ";" "height:" <String> ";"}"
+<Dropdown> ::= "Dropdown" "{" "label:" <String> ";" "options:" <OptionList> ";" "selected:" <String> ";"}"
+<Modal> ::= "Modal" "{" "title:" <String> ";" "content:" <String> ";" "width:" <String> ";" "height:" <String> ";"}"
+<Label> ::= "Label" "{" "text:" <String> ";" "color:" <String> ";" "font-size:" <String> ";"}"
+<Link> ::= "Link" "{" "url:" <String> ";" "text:" <String> ";"}"
+<Image> ::= "Image" "{" "src:" <String> ";" "alt:" <String> ";" "width:" <String> ";" "height:" <String> ";"}"
+<Icon> ::= "Icon" "{" "name:" <String> ";" "size:" <String> ";" "color:" <String> ";"}"
+<Table> ::= "Table" "{" "columns:" <ColumnList> ";" "rows:" <RowList> ";"}"
+<ProgressBar> ::= "ProgressBar" "{" "value:" <Integer> ";" "max:" <Integer> ";" "color:" <String> ";"}"
+<Spinner> ::= "Spinner" "{" "size:" <String> ";" "color:" <String> ";"}"
+<Slider> ::= "Slider" "{" "min:" <Integer> ";" "max:" <Integer> ";" "step:" <Integer> ";" "value:" <Integer> ";" "width:" <String> ";" "height:" <String> ";"}"
+<ProgressBarComponent> ::= "ProgressBar" "{" "value:" <Integer> ";" "max:" <Integer> ";" "width:" <String> ";" "height:" <String> ";"}"
+<Grid> ::= "Grid" "{" "columns:" <Integer> ";" "rows:" <Integer> ";" "gap:" <String> ";" "items:" <ItemList> ";"}"
+<InputGroup> ::= "InputGroup" "{" "label:" <String> ";" "inputs:" <InputList> ";"}"
+<Form> ::= "Form" "{" "fields:" <FieldList> ";"}"
+<Carousel> ::= "Carousel" "{" "images:" <ImageList> ";" "interval:" <Integer> ";" "controls:" <Boolean> ";" "indicators:" <Boolean> ";" "autoplay:" <Boolean> ";"}"
+
+<OptionList> ::= <String> ("," <String>)* 
+<InputList> ::= <Input>* 
+<Input> ::= "TextField" | "Password" | "Checkbox" | "RadioButton" | "Button" 
+<ImageList> ::= <String> ("," <String>)* 
+<FieldList> ::= <Field>+ 
+<Field> ::= "TextField" | "Password" | "Checkbox" | "RadioButton" | "Button"
+<ColumnList> ::= <Column>+ 
+<Column> ::= "Column" "{" "header:" <String> ";" "width:" <String> ";"}"
+<RowList> ::= <Row>+ 
+<Row> ::= "Row" "{" <CellList> ";"}"
+<CellList> ::= <String> ("," <String>)* 
+<Boolean> ::= "true" | "false"
+<String> ::= '"' <AnyCharacter>* '"'
+<Integer> ::= <Digit>+ 
+<Digit> ::= "0" | "1" | "2" | "3" | "4" | "5" | "6" | "7" | "8" | "9"
+<AnyCharacter> ::= any character except a quote (for <String>)

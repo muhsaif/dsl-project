@@ -1,0 +1,93 @@
+Label { text: "My Label"; width: "200px"; height: "50px"; }
+Link { text: "Click Here"; url: "https://example.com"; }
+Image { src: "https://via.placeholder.com/150"; alt: "Placeholder Image"; width: "150"; height: "150"; }
+Icon { name: "home"; color: "blue"; size: "24"; }
+Modal { title: "Modal Title"; content: "This is a modal content."; }
+Tooltip { text: "Hover over me"; tooltip: "Tooltip text here"; }
+Card { title: "Card Title"; content: "This is the card content."; }
+Table { headers: ["Name", "Age", "City"]; rows: ["Alice,25,New York; Bob,30,San Francisco; Charlie,22,Chicago"]; }
+List { items: ["Item 1", "Item 2", "Item 3"]; ordered: false; }
+ProgressBar { progress: 70; }
+Spinner { size: "40"; }
+Switch { state: "on"; }
+Alert { message: "This is an alert!"; type: "warning"; }
+Pagination { pages: 5; active: 2; }
+Tab { labels: ["Tab 1", "Tab 2", "Tab 3"]; active: 1; }
+Accordion { title: "Accordion Header"; content: "This is the accordion content."; }
+DatePicker { label: "Select Date"; }
+FileInput { label: "Upload File"; }
+Textarea { label: "Your Message"; }
+Navbar { title: "My Navbar"; links: ["Home,/,About,/about,Contact,/contact"]; }
+Footer { text: "© 2024 My Website"; }
+Sidebar { title: "Sidebar Title"; links: ["Dashboard,/dashboard,Settings,/settings,Logout,/logout"]; }
+Badge { text: "New"; color: "red"; }
+Toast { message: "This is a toast notification!"; duration: 3000; }
+
+Button {
+  text: "Submit";
+  width: "200px";
+  height: "50px";
+  color: "#4CAF50";
+}
+
+TextField {
+  placeholder: "Enter your name";
+  width: "300px";
+  height: "40px";
+}
+
+Checkbox {
+  label: "Accept Terms and Conditions";
+  checked: true;
+  width: "20px";
+  height: "20px";
+}
+
+RadioButton {
+  label: "Male";
+  checked: true;
+  width: "20px";
+  height: "20px";
+}
+
+Dropdown {
+  options: ["Option 1", "Option 2", "Option 3"];
+  width: "200px";
+  height: "40px";
+}
+
+Slider {
+  min: "0";
+  max: "100";
+  step: "1";
+  value: "50";
+  width: "100%";
+  height: "30px";
+}
+
+ProgressBar {
+  value: "40";
+  max: "100";
+  width: "100%";
+  height: "20px";
+}
+
+Grid {
+  columns: "3";
+  rows: "2";
+}
+
+InputGroup {
+  label: "Contact Information";
+  inputs: ["Email", "Phone"];
+}
+
+Form {
+  fields: ["Name", "Email", "Password"];
+}
+
+Carousel {
+  images: ["image1.jpg", "image2.jpg", "image3.jpg"];
+  interval: "3";
+}
+
